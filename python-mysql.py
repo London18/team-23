@@ -12,8 +12,8 @@ cursor = db.cursor()
 def filterOutCommonWords(input) :
     s=set(stopwords.words('english'))
     
-    #return " ".join(filter(lambda w:not w in s, input.split()))
-    return list(filter(lambda w:not w in s, input.split()))
+    return "|".join(filter(lambda w:not w in s, input.split()))
+    #return list(filter(lambda w:not w in s, input.split()))
 
 #def mergeWords()
 
@@ -31,10 +31,7 @@ def insert(answer):
 
 
 def search2(input):
-    sql = 'SELECT * FROM answers WHERE'
-    for term in input:
-        sql = sql + ' answers LIKE "%' + term + '%"'
-    print(sql)
+    sql = 'SELECT * FROM answers WHERE answers REGEXP "' + input + '"'
     cursor.execute(sql)
     try:
         # Execute the SQL command
