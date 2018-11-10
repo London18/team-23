@@ -1,5 +1,0 @@
-import string
-from google.appengine.api.search import Query
-Query('"%s"' % string.printable.replace('"', '').replace('\\', ''))
-
-Query('"%s"' % ''.join(chr(i) for i in xrange(128)).replace('"','').replace('\\', ''))
