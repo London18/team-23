@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8"/>
 <head runat="server">
-  <title>"In memory" calls</title>
+  <title>Example employee list</title>
   <!-- Latest compiled and minified CSS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -60,17 +60,63 @@
       </ul>
     </nav>
     <div class="container">
-      <h1 class="top-buffer">How to take "In Memory" calls</h1>
-
-      <a href="#">Here</a> is a brief guide on how to deal with in memory queries over the phone in case Ayesha, Kelly or Debbie aren’t here to take the call which there has been a few instances recently. Please refer to this when taking any in memory calls, especially funeral donation enquiries.<hr />
-
-      This is to ensure we capture all the information we need so our BOBs receive the best support needed at a difficult time.  
-
-      The in memory pages on the website have now been updated as well and people can now complete an online form to request a Giving in Memory pack. Please let me know if you have queries with anything but this should make the process a lot simpler for our BOBs!
-
-
-      Also, if you feel you would like any one to one phone training on how to take in memory calls, please do come and speak to Ayesha or Kelly!  We’re always happy to help!
-
+      <div class="col top-buffer">
+        <input id='myInput' class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Location</th>
+            <th scope="col">Department</th>
+            <th scope="col">Work phone</th>
+            <th scope="col">Work mobile</th>
+            <th scope="col">Internal</th>
+            <th scope="col">Vehicle registration</th>
+            <th scope="col">Make</th>
+            <th scope="col">Model</th>
+            <th scope="col">Color</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>#email</td>
+            <td>IT Officer</td>
+            <td>Home</td>
+            <td>Dev</td>
+            <td>+123</td>
+            <td>+321</td>
+            <td>213</td>
+            <td>Mdo</td>
+            <td>Odm</td>
+            <td>A4</td>
+            <td>Blue</td>
+          </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Leeroy</td>
+              <td>Jenkins</td>
+              <td>#charge</td>
+              <td>Guild Member</td>
+              <td>Upper Blackrock Spire</td>
+              <td>Adventurer</td>
+              <td>+231</td>
+              <td>+123</td>
+              <td>111</td>
+              <td>SPL</td>
+              <td>Kia</td>
+              <td>C'eed</td>
+              <td>Red</td>
+            </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
