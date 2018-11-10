@@ -20,6 +20,11 @@ Public Class Handler : Implements IHttpHandler, IRequiresSessionState
             context.Response.Write(New sqltables().InsertData(context.Request("question"), context.Request("answer"), context.Request("tags")))
         End If
 
+        If action = "getData" Then
+            context.Response.Write(New sqltables().selectData(context.Request("id")))
+
+        End If
+
     End Sub
 
 
