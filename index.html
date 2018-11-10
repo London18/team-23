@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<head runat="server">
+  <title>Hello</title>
+  <!-- Latest compiled and minified CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+  .top-buffer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+  }
+  #sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+  }
+
+  a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  #sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+  }
+
+  #sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+  }
+
+  #sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+  }
+
+  #sidebar ul p {
+    color: #fff;
+    padding: 10px;
+  }
+
+  #sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+  }
+  #sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+  }
+
+  #sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+  }
+  ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+  }
+  @media (max-width: 768px) {
+    #sidebar {
+      margin-left: -250px;
+    }
+    #sidebar.active {
+      margin-left: 0;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+      <ul class="list-unstyled components">
+        <li>
+          <a href="https://www.thebraintumourcharity.org/frequently-asked-questions/" target="_blank">FAQ</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/understanding-brain-tumours/" target="_blank">Understanding brain tumours</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Prognosis</a>
+        </li>
+        <hr />
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Team extensions</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Telephone list</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Car registrations</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">How to transfer a call</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">"In memory" calls</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Brian</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Donations</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Events</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Information & support</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Volunteers</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Big Bandana Bake !!!</a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+    <form id="form1">
+      <div class="container">
+        <div class="row">
+          <div class="col top-buffer">
+            <input id='myInput' class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </div>
+          <table id="myTable" class="col-md">
+            <tr class="row">
+              <th class="col-md-6">Do you only assist people within the UK?</th>
+            </tr>
+            <tr>
+              <td class="col-md-8">Our support services are available within the UK, and some of our information pages would only be relevant for a UK audience, however we would never discourage anybody outside the UK from reading our information and contacting us as we may be able to point you in the direction of a service that is local to you. View our information pages.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
