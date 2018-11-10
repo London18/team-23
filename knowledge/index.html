@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8"/>
-<head runat="server">
-  <title>Hello</title>
+  <title>Search</title>
   <!-- Latest compiled and minified CSS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,81 +24,57 @@
           <a href="index.html">Search</a>
         </li>
         <li>
-          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Team extensions</a>
+          <a href="#">Team extensions</a>
         </li>
         <li>
-          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Telephone list</a>
+          <a href="#">Telephone list</a>
         </li>
         <li>
-          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Car registrations</a>
+          <a href="#">Car registrations</a>
         </li>
         <li>
-          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">How to transfer a call</a>
+          <a href="#">How to transfer a call</a>
         </li>
         <li>
           <a href="inmemory.html">"In memory" calls</a>
         </li>
         <li>
-          <a href="https://www.thebraintumourcharity.org/understanding-brain-tumours/getting-a-diagnosis/brian/" target="_blank">Brian</a>
+          <a href="https://www.thebraintumourcharity.org/understanding-brain-tumours/getting-a-diagnosis/brian/">Brian</a>
         </li>
         <li>
-          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Donations</a>
+          <a href="#">Donations</a>
         </li>
         <li>
           <a href="https://www.thebraintumourcharity.org/get-involved/events/" target="_blank">Events</a>
         </li>
         <li>
-          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Information & support</a>
+          <a href="#">Information & support</a>
         </li>
         <li>
-          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Volunteers</a>
+          <a href="#">Volunteers</a>
         </li>
         <li>
-          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Big Bandana Bake !!!</a>
+          <a href="#">Big Bandana Bake !!!</a>
         </li>
       </ul>
     </nav>
-    <script>
-    function myFunction() {
-      // Declare variables
-      var input, filter, table, tr, td, i;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-
-      // Loop through all table rows, and hide those who don't match the search query
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }
-      }
-    }
-    </script>
-    <form id="form1">
-      <div class="container">
-        <div class="row">
-          <div class="col top-buffer">
-            <input id='myInput' class="form-control" type="text" placeholder="Search" aria-label="Search">
-          </div>
-          <table id="myTable" class="col-md">
-            <tr class="row">
-              <th class="col-md-6">Do you only assist people within the UK?</th>
-            </tr>
-            <tr>
-              <td class="col-md-8">Our support services are available within the UK, and some of our information pages would only be relevant for a UK audience, however we would never discourage anybody outside the UK from reading our information and contacting us as we may be able to point you in the direction of a service that is local to you. View our information pages.</td>
-            </tr>
-          </table>
+    <div class="container">
+      <div class="row">
+        <div class="col top-buffer">
+          <input id='myInput' class="form-control" type="text" placeholder="Search" aria-label="Search">
         </div>
+        <table id="myTable" class="col-md">
+          <tr class="row">
+            <th class="col-md-6">Do you only assist people within the UK?</th>
+          </tr>
+          <tr>
+            <td class="col-md-8">Our support services are available within the UK, and some of our information pages would only be relevant for a UK audience, however we would never discourage anybody outside the UK from reading our information and contacting us as we may be able to point you in the direction of a service that is local to you. View our information pages.</td>
+          </tr>
+        </table>
       </div>
-    </form>
+    </div>
     <div id="footer">
-      <img src="logo.png" />
+      <a href="https://www.thebraintumourcharity.org"><img src="logo.png" /></a>
     </div>
   </div>
 </body>
