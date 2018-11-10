@@ -23,6 +23,18 @@
         $("#myModal").modal();
     });
 
+    $(".editbtn").click(function () {
+        console.log("Edit btn");
+        $("#myModal").modal('toggle');
+        $("#addQuestionModal").modal('show');
+        var id = $(this).attr('id');
+        //console.log("The id is: " + id);
+
+
+        $.post("Handler.ashx", { action: "getData", id: id }, function (data) {
+            console.log(data);
+        });
+    });
     
 });
 

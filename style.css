@@ -36,15 +36,3 @@
             /* Add a grey background color to the table header and on hover */
             background-color: #f1f1f1;
         }
-
-.table td {
-    max-width: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: block;
-}
-
-td {
-    border: 1px solid;
-}
