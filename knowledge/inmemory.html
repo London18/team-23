@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<head runat="server">
+  <title>Hello</title>
+  <!-- Latest compiled and minified CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+      <ul class="list-unstyled components">
+        <li>
+          <a href="https://www.thebraintumourcharity.org/frequently-asked-questions/" target="_blank">FAQ</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/understanding-brain-tumours/" target="_blank">Understanding brain tumours</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Prognosis</a>
+        </li>
+        <hr />
+        <li>
+          <a href="index.html">Search</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Team extensions</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Telephone list</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Car registrations</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">How to transfer a call</a>
+        </li>
+        <li>
+          <a href="inmemory.html">"In memory" calls</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/understanding-brain-tumours/getting-a-diagnosis/brian/" target="_blank">Brian</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Donations</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/get-involved/events/" target="_blank">Events</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Information & support</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Volunteers</a>
+        </li>
+        <li>
+          <a href="https://www.thebraintumourcharity.org/prognosis-for-brain-tumours/" target="_blank">Big Bandana Bake !!!</a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+    <form id="form1">
+      <div class="container">
+        <h3 class="top-buffer">How to take "In Memory" calls</h3>
+
+        Here is a brief guide on how to deal with in memory queries over the phone in case Ayesha, Kelly or Debbie aren’t here to take the call which there has been a few instances recently. Please refer to this when taking any in memory calls, especially funeral donation enquiries.
+
+        This is to ensure we capture all the information we need so our BOBs receive the best support needed at a difficult time.  
+
+        The in memory pages on the website have now been updated as well and people can now complete an online form to request a Giving in Memory pack. Please let me know if you have queries with anything but this should make the process a lot simpler for our BOBs!
+
+
+        Also, if you feel you would like any one to one phone training on how to take in memory calls, please do come and speak to Ayesha or Kelly!  We’re always happy to help!
+
+      </div>
+    </form>
+  </div>
+</body>
+</html>
