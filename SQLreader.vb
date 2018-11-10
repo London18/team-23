@@ -5,17 +5,17 @@ Imports System.Data.SqlClient
 Namespace sqlreading
 
     Public Class sqltables
-        'creates a table and displays the data to html 
+        'creates a table and displays the data to html table
         Public Function DisplayRow() As String
 
-            Dim data As String = "<table border='1' class='table'> <tr><th>Questions</th> <th>Answers</th> <th>Keywords</th> </tr>"
+            Dim data As String = "<table border='1' class='table' style='table-layout: fixed; width: 100%'> <tr><th>Questions</th> <th>Answers</th> <th>Keywords</th> </tr>"
             Dim sql_command As String = "Select * FROM [Answers] "
             Dim con As New SqlConnection("Server=DESKTOP-3J246S1\SQLEXPRESS01;Database=Questions;User Id=kostas;Password=12345rondo;")
             Using cmd As New SqlCommand(sql_command, con)
                 con.Open()
                 Using r As SqlDataReader = cmd.ExecuteReader()
                     While r.Read
-                        data += "<tr>"
+                        data += "<tr class='editable'>"
                         data += addColumn(r("Questions"))
                         data += addColumn(r("Answers"))
                         data += addColumn(r("Keywords"))
@@ -30,7 +30,7 @@ Namespace sqlreading
 
         'add the specific column to the html table
         Private Function addColumn(ByVal ColumnName As String) As String
-            Return "<td><div>" & ColumnName & "</div></td>"
+            Return "<td style='word-wrap: break-word'><div>" & ColumnName & "</div></td>"
         End Function
 
         'deletes all the previous data from the table and inserts the new data
